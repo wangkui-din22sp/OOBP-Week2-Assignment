@@ -8,7 +8,7 @@
 Task 1 - Greeter function
 Create a function with the name GreeterFunction that takes a string as a parameter and returns a string that says "Hello, " + the parameter.
 */
-/* Write your solution here */
+/* Write your Task 1 solution here */
 
 /* 
 Task 2 - Define a city object and use an interface to define the object structure.
@@ -17,7 +17,7 @@ The city object should have the following properties
 - population
 - country
 
-The city object should be assigned to cityObject variable.
+The city object should be assigned to the cityObject variable.
 
 The city object should describe Helsinki, Finland with population of 600000.
 */
