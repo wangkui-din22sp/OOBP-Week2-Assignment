@@ -111,6 +111,8 @@ describe("lion and snake tests", () => {
   });
 });
 
+// === City Functions Tests ===
+// Tests for city-related functions, including getting city names, uppercase names, and the city with the lowest population
 import { City, cities, getCityNames, getCityNamesInUpperCase, getCityWithLowestPopulation } from './week2';
 
 describe('City Functions', () => {
@@ -130,12 +132,14 @@ describe('City Functions', () => {
   });
 });
 
-
+// === BankAccount Tests ===
+// Tests for the BankAccount class, verifying balance operations and log functionality
 import { BankAccount } from './week2';
 
 describe('BankAccount', () => {
   let account: BankAccount;
 
+  // Setup before each test: Initialize a new BankAccount instance
   beforeEach(() => {
     account = new BankAccount('John Doe', '12345');
   });
