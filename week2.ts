@@ -9,9 +9,6 @@ Task 1 - Greeter function
 Create a function with the name GreeterFunction that takes a string as a parameter and returns a string that says "Hello, " + the parameter.
 */
 /* Write your Task 1 solution here */
-function GreeterFunction(name: string): string {
-  return "Hello, " + name;
-}
 
 /* 
 Task 2 - Define a city object and use an interface to define the object structure.
@@ -25,17 +22,7 @@ The city object should be assigned to the cityObject variable.
 The city object should describe Helsinki, Finland with population of 600000.
 */
 
-interface City {
-  name: string;
-  population: number;
-  country: string;
-}
-
-let cityObject: City = {
-  name: "Helsinki",
-  population: 600000,
-  country: "Finland",
-};
+let cityObject = null; // Assign your city object to cityObject variable.
 
 /*
 Task 3 - Create a class to describe an animal.
@@ -48,15 +35,11 @@ animal1 should have name "Cat" and age 2
 animal2 should have name "Dog" and age 3
 */
 class Animal {
-  constructor(public name: string, public age: number) {}
+  /* Write your solution here */
 }
 
-let animal1 = new Animal("Cat", 2);
-let animal2 = new Animal("Dog", 3);
-
-
-
-
+let animal1 = null; // initialize the animal1
+let animal2 = null; // initialize the animal2
 
 /* Task 4 - Improve your solution for Task 3 so that the Animal
   class has a method called "makeSound". This improved solution should be implemented 
@@ -72,53 +55,53 @@ let animal2 = new Animal("Dog", 3);
 
   The animal objects should be assigned to snake and lion variables respectively.
 */
-
 class Animal2 {
-  constructor(public name: string, public age: number, public sound: string) {}
-
-  makeSound(): string {
-    return `I am a ${this.name} and I sound like ${this.sound}`;
-  }
+  /* Write your solution here */
 }
 
-let snake = new Animal2("Snake", 4, "hiss");
-let lion = new Animal2("Lion", 8, "roar");
+let snake = null; // Initialize the snake
+let lion = null; // Initialize the lion
 
 export { GreeterFunction, cityObject, animal1, animal2, snake, lion };
 
 
-
-export const cities: City[] = [
-  { name: 'London', population: 8900000,  country: 'UK' },
-  { name: 'Berlin', population: 3700000, country: 'Germany' },
-  { name: 'New York', population: 8500000, country: 'USA' }
-];
+// Task 5: Define an array of city objects with at least three elements or more, by using the interface you made in Task 2., as every city object 
+// should have the following properties:
+// - name
+// - population
+// - country
+//
+// initialize this array of city objects with certain initial values defined by yourself. 
+// Then create a function which returns an string array of the city names. 
+// Create a function which converts the city names to uppercases. 
+// Create a function which gets the city with lowest population count. 
+export const cities: City[] = /* Write your solution here */
 
 export function getCityNames(cities: City[]): string[] {
-  return cities.map(city => city.name);
+   /* Write your solution here */
 }
 
 export function getCityNamesInUpperCase(cities: City[]): string[] {
-  return cities.map(city => city.name.toUpperCase());
+   /* Write your solution here */
 }
 
 export function getCityWithLowestPopulation(cities: City[]): City {
-  return cities.reduce((prev, curr) => (prev.population < curr.population ? prev : curr));
+  /* Write your solution here */
 }
 
 
-export class BankAccount  {
-  owner: string;
-  id: string;
-  balance: number;
-  log: string[];
+// Task 6: methods to get the current balance and methods to increase or decrease balance. Account should also keep log of increase / decrease balance events.
+// Account should have a function to print the log.
 
-  constructor(owner: string, id: string) {
-    this.owner = owner;
-    this.id = id;
-    this.balance = 0;
-    this.log = [];
-  }
+// Step 1: Create a class named BankAccount to describe a bank account.
+// the class should have the following properties:
+// - owner ( the owner name should be initialized with the parameter of the constructor)
+// - id (the id should be initialized with the parameter of the constructor)
+// - balance (initialize it to 0 inside the constructor)
+// - log (array of strings to keep track of balance changes, initialize it with empty string array in the constructor) 
+export class BankAccount  {
+
+   /*Step 1 : Write your solution here */
 
   getTimestamp(): string {
     return new Date().toLocaleString('en-US', {
@@ -132,22 +115,24 @@ export class BankAccount  {
     });
   }
 
+  // Step 2. write a method to get the current balance
   getBalance(): number {
-    return this.balance;
+     /* Write your solution here */
   }
 
+  // Step 3. write a method to increase the balance. Inside this method, the method getTimestamp should be used to get the current timestamp.
+  // As a result, the string `${timestamp} : +${amount}`(quoted with single quote) should be added to the log.
   increaseBalance(amount: number): void {
-    this.balance += amount;
-    const timestamp = this.getTimestamp();
-    this.log.push(`${timestamp} : +${amount}`);
+     /* Write your solution here */
   }
 
+  // Step 4. write a method to decrease the balance. Inside this method, the method getTimestamp should be used to get the current timestamp.
+  // As a result, the string `${timestamp} : -${amount}`(quoted with single quote) should be added to the log.
   decreaseBalance(amount: number): void {
-    this.balance -= amount;
-    const timestamp = this.getTimestamp();
-    this.log.push(`${timestamp} : -${amount}`);
+     /* Write your solution here */
   }
 
+  // print the log
   printLog(): void {
     console.log(this.log.join("\n"));
   }

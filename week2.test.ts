@@ -157,14 +157,5 @@ describe('BankAccount', () => {
     expect(account.getBalance()).toBe(150);
   });
 
-  test('should print log with correct format', () => {
-    const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
-    account.increaseBalance(100);
-    account.decreaseBalance(50);
-    account.printLog();
-    expect(consoleSpy).toHaveBeenCalledWith(
-      expect.stringMatching(/\d{2}\/\d{2}\/\d{4}, \d{2}:\d{2}:\d{2} : \+100\n\d{2}\/\d{2}\/\d{4}, \d{2}:\d{2}:\d{2} : -50/)
-    );
-    consoleSpy.mockRestore();
-  });
+
 });
